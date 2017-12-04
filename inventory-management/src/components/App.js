@@ -2,10 +2,12 @@ import React from 'react';
 import { jsonServerRestClient, Admin, Resource } from 'admin-on-rest';
 
 import { PostList } from './Posts';
+import Test from './Test';
 
 const App = () => (
     <Admin restClient={jsonServerRestClient('http://jsonplaceholder.typicode.com')}>
-        <Resource name="Posts" list={PostList} />
+        <Resource name="Test" list={Test} />
+        <Test/>
     </Admin>
 );
 
