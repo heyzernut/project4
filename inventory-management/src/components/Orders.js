@@ -1,30 +1,32 @@
 import React, {Component} from 'react';
-import Order from './Orders'
 
-class App extends Component {
+class Orders extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      test: 'not fetched'
+      orders: []
     }
   }
   componentDidMount() {
      console.log('mounted')
-     fetch("/test")
+     fetch("/orders")
       .then((res) => res.json())
       .then((data) => {
-        this.setState({test: data.test})
+        console.log(data.orders)
+        this.setState({orders: data.orders })
       })
   }
 
   render() {
     return (
       <div>
-        <Order/>
+        {this.state.orders.map((order)=>{
+          return <div>{order.invoiceNo}</div>
+        })}
       </div>
     )
   }
 }
 
 
-export default App
+export default Orders
