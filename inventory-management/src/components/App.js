@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class App extends Component {
   constructor(props) {
@@ -7,6 +7,7 @@ class App extends Component {
       test: 'not fetched'
     }
   }
+  
   componentDidMount() {
      console.log('mounted')
      fetch("/test")
