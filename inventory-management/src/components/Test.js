@@ -8,7 +8,6 @@ class Test extends Component {
     }
   }
 
-
   componentDidMount() {
 
      console.log('mounted')
