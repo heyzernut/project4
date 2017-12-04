@@ -5,9 +5,8 @@ import PostList from './Posts';
 import Test from './Test';
 
 const App = () => (
-    <Admin restClient={jsonServerRestClient('http://jsonplaceholder.typicode.com')}>
+    <Admin restClient={jsonServerRestClient('')}>
         <Resource name="Test" list={Test} />
-        <Test/>
     </Admin>
 );
 
