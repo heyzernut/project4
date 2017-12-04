@@ -7,8 +7,8 @@ import {SuppliersList} from './suppliers';
 
 const App = () => (
     <Admin restClient={jsonServerRestClient('http://localhost:5100')}>
-        <Resource name="Test" list={ Test } />
-        <Resource name="Posts" list={ PostList } />
+        <Resource name="Test" list={Test} />
+        <Resource name="Posts" list={PostList} />
         <Resource name="suppliers" list={SuppliersList} />
     </Admin>
 );
