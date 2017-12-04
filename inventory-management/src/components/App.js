@@ -1,5 +1,4 @@
-import React from 'react';
-import { jsonServerRestClient, Admin, Resource } from 'admin-on-rest';
+import React, {Component} from 'react';
 
 import { PostList } from './Posts';
 import Test from './Test';
@@ -11,4 +10,5 @@ const App = () => (
     </Admin>
 );
 
-export default App;
+
+export default App
