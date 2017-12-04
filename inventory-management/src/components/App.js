@@ -1,30 +1,15 @@
-import React, {Component} from 'react';
-import Order from './Orders'
+import React from 'react';
+import { jsonServerRestClient, Admin, Resource } from 'admin-on-rest';
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      test: 'not fetched'
-    }
-  }
-  componentDidMount() {
-     console.log('mounted')
-     fetch("/test")
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({test: data.test})
-      })
-  }
+import { PostList } from './Posts';
+import Test from './Test';
 
-  render() {
-    return (
-      <div>
-        <Order/>
-      </div>
-    )
-  }
-}
+const App = () => (
+    <Admin restClient={jsonServerRestClient('')}>
+        <Resource name="Test" list={ Test } />
+        <Resource name="Posts" list={ PostList } />
+    </Admin>
+);
 
 
 export default App
