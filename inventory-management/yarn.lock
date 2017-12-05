@@ -159,6 +159,10 @@ anymatch@^1.3.0:
     micromatch "^2.1.5"
     normalize-path "^2.0.0"
 
+aor-jsonapi-client@^0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/aor-jsonapi-client/-/aor-jsonapi-client-0.1.16.tgz#1a6917a90640650bb4c19aec93d962e33a219072"
+
 append-transform@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/append-transform/-/append-transform-0.4.0.tgz#d76ebf8ca94d276e247a36bad44a4b74ab611991"
