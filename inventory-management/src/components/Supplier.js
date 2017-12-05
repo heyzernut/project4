@@ -17,14 +17,23 @@ class Supplier extends Component {
       })
     }
 
+renderList = () => {
+  if ( this.state.supplier.length > 0 ) {
+    return this.state.supplier.map((supplier)=> {
+      return (<div>
+        {supplier.name}
+      </div>)
+    })
+  }
+}
+
 render(){
+
+
+
   return (
     <div>
-      {this.state.supplier.map((supplier)=> {
-        return (<div>
-          {supplier.name}
-        </div>)
-      })}
+      {this.renderList()}
     </div>
     )
   }
