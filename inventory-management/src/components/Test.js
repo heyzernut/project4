@@ -12,8 +12,9 @@ class Test extends Component {
 
      console.log('mounted')
      fetch("/test")
-      .then((res) => res.json())
+      .then(res => res.json())
       .then((data) => {
+        console.log(data)
         this.setState({test: data.test})
       })
   }

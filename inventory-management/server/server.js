@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+// const port = process.env.NODE_ENV === 'production' ? process.env.PORT : 5100 // this is for our express server
+
 const PORT = process.env.PORT || 5100;
 
 // Priority serve any static files.

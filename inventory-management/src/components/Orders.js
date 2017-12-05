@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, Datagrid, TextField } from 'admin-on-rest';
-import Moment from 'react-moment';
+// import Moment from 'react-moment';
 
 export const Orders = (props) => (
     <List {...props}>
