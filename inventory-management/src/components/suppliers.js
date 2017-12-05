@@ -5,9 +5,10 @@ import { List, Datagrid, TextField } from 'admin-on-rest';
 export const SuppliersList = (props) => (
     <List {...props}>
         <Datagrid>
-            <TextField source="supplier.name" />
-            <TextField source="supplier.location" />
-            <TextField source="supplier.contact" />
+            <TextField source="id" />
+            <TextField source="name" />
+            <TextField source="location" />
+            <TextField source="contact" />
         </Datagrid>
     </List>
 );

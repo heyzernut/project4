@@ -1,33 +1,18 @@
 import React from 'react';
+
+import { Admin, Resource } from 'admin-on-rest';
+// import jsonAPIRestClient from 'aor-jsonapi-client/build/restClient';
+import loopbackRestClient from 'aor-loopback';
+// import loopbackRestClient, {authClient} from 'aor-loopback';
+
+
 import { PostList } from './Posts';
-import Test from './Test';
-import {SuppliersList} from './suppliers';
+import { SuppliersList } from './suppliers';
 import { Orders } from './orders'
+import Test from './Test';
 import { Inventories } from './inventories'
 
-import { simpleRestClient, fetchUtils, Admin, Resource, jsonServerRestClient } from 'admin-on-rest';
-const httpClient = (url, options = {}) => {
-    if (!options.headers) {
-        options.headers = new Headers({ Accept: 'application/json' });
-    }
-    // add your own headers here
-    // options.headers.set('X-Custom-Header', 'foobar');
-    options.headers.set('Content-Range', 'inventories 0-5/5');
-    return fetchUtils.fetchJson(url, options);
-}
-const restClient = jsonServerRestClient('http://localhost:5100', httpClient);
-// const httpClient = (url, options = {}) => {
-//     if (!options.headers) {
-//         options.headers = new Headers({ Accept: 'application/json' });
-//     }
-//     // add your own headers here
-//     options.headers.set('Content-Range', 'inventories 0-24/319');
-//     return fetchUtils.fetchJson(url, options);
-// }
-// const restClient = simpleRestClient('http://localhost:5100', httpClient);
-
-
-
+const restClient = loopbackRestClient('http://localhost:5100');
 const App = () => (
 
 
